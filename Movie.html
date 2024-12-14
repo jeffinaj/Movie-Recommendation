@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Movie Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('1_oRJYoC18Msc4tC6FExYRKQ.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+        }
+    
+        h1 {
+            background-color: rgba(0, 123, 255, 0.8); 
+            color: white;
+            padding: 15px;
+            margin: 0;
+        }
+    
+        .filters, .movie-list {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+    
+        .filters select, .filters button {
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    
+        .filters button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+    
+        .movie-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+    
+        .movie-card {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+        }
+    
+        .movie-card h3 {
+            font-size: 1rem;
+        }
+    
+        .movie-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <h1>Movie Recommendations</h1>
+
+    <div class="filters">
+        <select id="genre">
+            <option value="">Select Genre</option>
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <option value="Horror">Horror</option>
+        </select>
+
+        <select id="rating">
+            <option value="">Select Rating</option>
+            <option value="5">5+ Stars</option>
+            <option value="4">4+ Stars</option>
+            <option value="3">3+ Stars</option>
+            <option value="3">Below 3+ Stars</option>
+        </select>
+
+        <select id="language">
+            <option value="">Select language</option>
+            <option value="5">Tamil</option>
+            <option value="4">English</option>
+            <option value="3">Hindi</option>
+            <option value="3">Telugu</option>
+            <option value="3">Malayalam</option>
+            <option value="3">Other</option>
+        </select>
+
+        <button id="search">Search Movies</button>
+    </div>
+
+    <div class="movie-list" id="movie-list">
+        <!-- Movie cards will appear here -->
+    </div>
+</body>
+</html>
